@@ -16,3 +16,15 @@ exe 'syn region pandocPythonChunk '.
             \'contained containedin=pandocDelimitedCodeblock contains=@python'
 
 syn region pandocInlinePython matchgroup=Operator start=/`python\s/ end=/`/ contains=@Python concealends
+
+exe 'syn region qmdOptions matchgroup=qmdID '.
+            \'start="^#|\s" '.
+            \'end="$" '.
+            \'contained containedin=pandocPythonChunk contains=@Yaml'
+
+exe 'syn region qmdOptions matchgroup=qmdID '.
+            \'start="^#|\s" '.
+            \'end="$" '.
+            \'contained containedin=pandocRChunk contains=@Yaml'
+
+hi link qmdID Constant
