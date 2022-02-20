@@ -5,7 +5,7 @@ quarto-vim
 
 quarto-vim is a fork of the [vim-rmarkdown](https://github.com/vim-pandoc/vim-rmarkdown) plugin.
 
-quarto-vim currently only handles syntax highlighthing for qmd
+quarto-vim currently only handles syntax highlighting for qmd
 files, however we'd very much like to add more of the features
 available in the excellent [vim-pandoc](https://githhub.com/vim-pandoc/viv-pandoc)
 plugin. If you are interested in contributing please get in
@@ -27,7 +27,7 @@ to your .vimrc, source it, and execute `:PluginInstall`.
 
 ## Usage
 
-Files with the .qmd extension are automatically detected as Quarto files and use highlithing rules from vim-pandoc-syntax (in addition to some special rules for Quarto executable code).
+Files with the .qmd extension are automatically detected as Quarto files and use highlighting rules from vim-pandoc-syntax (in addition to some special rules for Quarto executable code).
 
 ### Syntax
 
