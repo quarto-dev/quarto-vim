@@ -16,3 +16,12 @@ exe 'syn region pandocPythonChunk '.
             \'contained containedin=pandocDelimitedCodeblock contains=@python'
 
 syn region pandocInlinePython matchgroup=Operator start=/`python\s/ end=/`/ contains=@Python concealends
+
+PandocHighlight julia
+" quarto recognizes embedded Julia differently than regular pandoc
+exe 'syn region pandocJuliaChunk '. 
+            \'start=/\(```\s*{\s*julia.*\n\)\@<=\_^/ ' .
+            \'end=/\_$\n\(\(\s\{4,}\)\=\(`\{3,}`*\|\~\{3,}\~*\)\_$\n\_$\)\@=/ '. 
+            \'contained containedin=pandocDelimitedCodeblock contains=@julia'
+
+syn region pandocInlineJulia matchgroup=Operator start=/`julia\s/ end=/`/ contains=@Julia concealends
